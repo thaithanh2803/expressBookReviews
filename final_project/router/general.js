@@ -30,9 +30,7 @@ function getBooks() {
 
 public_users.get('/',function (req, res) {
   //Write your code here
-  getBooks.then(result => {
-    res.send(JSON.stringify(result,null,4));
-  });
+  getBooks().then((result) => res.send(JSON.stringify(result,null,4)));
   //res.send(JSON.stringify({books},null,4));
 });
 
